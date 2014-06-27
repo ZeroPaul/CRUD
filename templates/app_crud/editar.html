@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{%block contenido %}
+<h1>{{producto.Nombre}}</h1>
+<form action = "" method="post"> {% csrf_token %}
+    <div class = "form-group">
+        <label  class="col-sm-2
+            control-label">Nombre</label>
+    <div class = "col-sm-10">
+        <input type="text" class= "form-control" autofocus  placeholder = "nombre" 
+        id = {{formulario.Nombre}}
+        </div>
+    </div>
+    <div class = "form-group">
+        <label  class="col-sm-2
+            control-label">Cantidad</label>
+    <div class = "col-sm-10">
+        <input type="text" class= "form-control" autofocus  placeholder =
+        "cantidad" 
+        id = {{formulario.Cantidad}}
+        </div>
+    </div>
+    <div class = "form-group">
+        <label  class="col-sm-2
+            control-label">Precio</label>
+    <div class = "col-sm-10">
+        <input type="text" class= "form-control" autofocus  placeholder =
+        "cantidad" 
+        id = {{formulario.Precio}}
+    </div>
+    <div class="col-sm-10">
+    <button type="submit/button" class = "btn btn-primary">Save</button>
+        <a href="/"class = "btn btn-danger"
+            ><span class="glyphicon glyphicon-arrow-left"></span> Return</a>
+    </div>
+</form>
+{%endblock%}

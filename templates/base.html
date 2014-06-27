@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" >
+    <title>Project</title>
+    <link href="{{STATIC_URL}}css/bootstrap.css " rel = "stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class = "container"> 
+        <div class="well">
+            <h3>
+                <div class="alert alert-info">
+                    <p class="alert-link">Sistema Crud</p>
+                  </div> 
+            </h3>
+            {% block contenido%}
+
+            {% endblock %}
+        </div>
+    </div>
+    <script type = "text/javaScript" src= "{{STATIC_UR}}js/bootstrap.js"></script>
+</body>
+</html>
+

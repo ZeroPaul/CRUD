@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{%block contenido %}
+<table  class = "table table-striped" cellspacing = '0'>
+        <thead>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>{{producto.Nombre}}</td>
+                <td>{{producto.Cantidad}}</td>
+                <td>{{producto.Precio}}</td> 
+                <td> 
+                    <a href = "{% url 'app_crud.views.editar' producto.id %}"
+                        class= "btn btn-info">Correct</a>
+                </td> 
+                <td> 
+                    <a href="{%url 'app_crud.views.borrar' producto.id %} "
+                        type = "button" class = "btn btn-danger">
+                        <span class ="glyphicon glyphicon-trash" ></span></a>
+                </td> 
+            </tr>
+            {%empty %}
+            <tr>
+                <td> No hay Productos Disponibles </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <a href="{% url 'app_crud.views.agregar' %} "class = "btn btn-primary"
+            ><span class="glyphicon glyphicon-plus"></span> Add</a>
+{%endblock%}
