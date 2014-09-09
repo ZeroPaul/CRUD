@@ -1,9 +1,9 @@
-CRUD
-====
+CRUD en django 1.6
+===================
 
-django 1.6
+
 
   Caracteristicas
-  ===============
+==================
   
     CRUD Basico en django 1.6
